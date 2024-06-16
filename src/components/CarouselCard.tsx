@@ -1,40 +1,11 @@
-import {
-  Badge,
-  Button,
-  Card,
-  Center,
-  Group,
-  Stack,
-  Title,
-  Text,
-  Image,
-  Grid,
-  Timeline,
-  Progress,
-} from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
+import { Card, Title, Group, Badge, Button,Image,Text } from "@mantine/core";
+import { PropsWithChildren } from "react";
 import TRIPS from "../providers/trip_provider";
-import { useNavigate } from "react-router-dom";
-import Page from "./Page";
 
-export function HomePage() {
-  const navigate = useNavigate();
-
-  const getColor = (year: number) => {
-    if (year === 2024) return "green";
-    if (year === 2023) return "grape";
-    if (year === 2022) return "red";
-    if (year === 2021) return "blue";
-    if (year === 2020) return "lime";
-  };
-  return (
-    <Page>
-      <Grid>
-        <Grid.Col span={8}>
-          <Center p={"sm"}>
-            <Stack>
-              <Title size="h1">Welcome! Have a Loved day!</Title>
-              <Card shadow="sm" padding="lg" radius="md" withBorder maw={"120vh"}>
+function CarouselCard({children,title,color}:{children:PropsWithChildren<{}>,title:string,color:string}){
+return(
+    <Card shadow="sm" padding="lg" radius="md" withBorder maw={"120vh"}>
                 <Title></Title>
                 <Carousel
                   orientation="horizontal"
@@ -90,23 +61,6 @@ export function HomePage() {
                   ))}
                 </Carousel>
               </Card>
-            </Stack>
-          </Center>
-        </Grid.Col>
-        <Grid.Col span={2}>
-          <Center p={"sm"}>
-            <Timeline bulletSize={24} active={1} h={"40vh"}>
-              <Timeline.Item title="Start" />
-              <Timeline.Item title="4 Years Ago" />
-              <Timeline.Item title="3 Years Ago" />
-              <Timeline.Item title="2 Years Ago" />
-              <Timeline.Item title="1 Years Ago" />
-              <Timeline.Item title="Today" />
-            </Timeline>
-          </Center>
-        </Grid.Col>
-      </Grid>
-    </Page>
-  );
+)
 }
-export default HomePage;
+export default function CarouselCard;
