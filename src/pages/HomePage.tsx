@@ -5,7 +5,6 @@ import {
   Grid,
 } from "@mantine/core";
 import TRIPS from "../providers/trip_provider";
-import { useNavigate } from "react-router-dom";
 import Page from "./Page";
 import CarouselCard from "../components/CarouselCard";
 

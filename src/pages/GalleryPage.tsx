@@ -1,10 +1,34 @@
-import { Card, Center, Image, SimpleGrid, Text } from "@mantine/core";
+import {
+  Card,
+  Center,
+  Image,
+  LoadingOverlay,
+  SimpleGrid,
+  Text,
+} from "@mantine/core";
 import { ImgDes } from "../providers/types";
 import Page from "./Page";
+import { useState, useEffect } from "react";
 
 export function GalleryPage({ imageMap }: { imageMap: ImgDes[] }) {
+  const [visible, _setVisable] = useState(false);
+  useEffect(() => {
+    const loadImage = (url: string) =>
+      new Promise<void>((resolve, reject) => {
+        resolve();
+      });
+
+    Promise.all(imageMap.map((item) => loadImage(item.src)))
+      .then((prev) => {})
+      .catch((error) => console.error("Error loading images:", error));
+  }, [imageMap]);
   return (
     <Page>
+      <LoadingOverlay
+        visible={visible}
+        zIndex={1000}
+        overlayProps={{ radius: "sm", blur: 2 }}
+      />
       <Center>
         <Card shadow="sm" padding="lg" radius="md" w={"100vh"} withBorder>
           <SimpleGrid cols={4}>

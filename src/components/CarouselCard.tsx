@@ -1,7 +1,5 @@
 import { Carousel } from "@mantine/carousel";
 import { Card, Title, Group, Badge, Button, Image, Text } from "@mantine/core";
-import { PropsWithChildren } from "react";
-import TRIPS from "../providers/trip_provider";
 import { Trip } from "../providers/types";
 import { useNavigate } from "react-router-dom";
 
