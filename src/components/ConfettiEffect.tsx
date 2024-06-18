@@ -19,7 +19,7 @@ function ConffetiEffect() {
     }
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
+  const particlesLoaded = async (_container?: Container): Promise<void> => {
   };
 
   if (init) {

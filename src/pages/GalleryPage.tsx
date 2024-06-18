@@ -13,13 +13,13 @@ import { useState, useEffect } from "react";
 export function GalleryPage({ imageMap }: { imageMap: ImgDes[] }) {
   const [visible, _setVisable] = useState(false);
   useEffect(() => {
-    const loadImage = (url: string) =>
-      new Promise<void>((resolve, reject) => {
+    const loadImage = (_url: string) =>
+      new Promise<void>((resolve, _reject) => {
         resolve();
       });
 
     Promise.all(imageMap.map((item) => loadImage(item.src)))
-      .then((prev) => {})
+      .then((_prev) => {})
       .catch((error) => console.error("Error loading images:", error));
   }, [imageMap]);
   return (
