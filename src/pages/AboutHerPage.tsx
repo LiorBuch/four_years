@@ -84,13 +84,17 @@ export function AboutHerPage() {
                         >
                           <Overlay
                             style={{
-                              backgroundBlendMode:"overlay",
+                              backgroundBlendMode: "overlay",
+                              backgroundSize: "contain",
+                              position: "absolute",
+                              left: (10 + 25*(index%4))+"%",
+                              top: ( 31*(Math.floor(index/4)))+"%",
                               backgroundImage:
-                                'url("https://images.squarespace-cdn.com/content/v1/5e8cef24d3d5ba030116ba72/1677800350215-OYWTWR4HJRZGGG6QQU1Z/paintedvine_sagepatternswatch+copy.jpg?format=1000w")',
+                                'url("https://github.com/LiorBuch/four_years/blob/main/public/assets/misc/pin.png?raw=true")',
                             }}
-                            backgroundOpacity={0.1}
-                            mah={"20vh"}
-                            maw={"20vh"}
+                            backgroundOpacity={0}
+                            mah={"4vh"}
+                            maw={"4vh"}
                           />
                           <Image src={img.src} fit="contain" />
                         </AspectRatio>
