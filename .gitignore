@@ -12,6 +12,8 @@ dist
 build
 dist-ssr
 *.local
+public/assets/res_handler.py
+public/assets/in/
 
 # Editor directories and files
 .vscode/*

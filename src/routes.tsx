@@ -1,20 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AboutHerPage, GalleryPage, HomePage } from "./pages";
-import IMAGE_PROVIDER, {
-  CRAZY_20,
-  CRAZY_21,
-  CRAZY_22,
-  CRAZY_23,
-  CRAZY_24,
-  EILAT21,
-  EILAT24,
-  EILAT_ZUKIM,
-  GERMANY22,
-  MEET,
-  NORTH21,
-  NORTH23,
-  SAFARI,
-} from "./providers/image_provider";
+import IMAGE_PROVIDER from "./providers/image_provider";
 
 export const ROUTES = createBrowserRouter([
   {
@@ -27,51 +13,51 @@ export const ROUTES = createBrowserRouter([
   },
   {
     path: "/north23/",
-    element: <GalleryPage imageMap={NORTH23} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.NORTH23} />,
   },
   {
     path: "/north21/",
-    element: <GalleryPage imageMap={NORTH21} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.NORTH21} />,
   },
   {
     path: "/eilat24/",
-    element: <GalleryPage imageMap={EILAT24} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.EILAT24} />,
   },
   {
     path: "/eilat_zukim/",
-    element: <GalleryPage imageMap={EILAT_ZUKIM} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.EILAT_ZUKIM} />,
   },
   {
     path: "/crazy_24/",
-    element: <GalleryPage imageMap={CRAZY_24} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.CRAZY_24} />,
   },
   {
     path: "/crazy_21/",
-    element: <GalleryPage imageMap={CRAZY_21} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.CRAZY_21} />,
   },
   {
     path: "/crazy_23/",
-    element: <GalleryPage imageMap={CRAZY_23} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.CRAZY_23} />,
   },
   {
     path: "/crazy_22/",
-    element: <GalleryPage imageMap={CRAZY_22} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.CRAZY_22} />,
   },
   {
     path: "/crazy_20/",
-    element: <GalleryPage imageMap={CRAZY_20} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.CRAZY_20} />,
   },
   {
     path: "/safari/",
-    element: <GalleryPage imageMap={SAFARI} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.SAFARI} />,
   },
   {
     path: "/meet/",
-    element: <GalleryPage imageMap={MEET} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.MEET} />,
   },
   {
     path: "/eilat21/",
-    element: <GalleryPage imageMap={EILAT21} />,
+    element: <GalleryPage imageMap={IMAGE_PROVIDER.EILAT21} />,
   },
   {
     path: "/about/",

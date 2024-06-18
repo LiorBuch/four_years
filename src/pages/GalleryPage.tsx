@@ -11,15 +11,16 @@ import Page from "./Page";
 import { useState, useEffect } from "react";
 
 export function GalleryPage({ imageMap }: { imageMap: ImgDes[] }) {
-  const [visible, _setVisable] = useState(false);
+  const [visible, setVisable] = useState(false);
   useEffect(() => {
+    setVisable(()=>true)
     const loadImage = (_url: string) =>
       new Promise<void>((resolve, _reject) => {
         resolve();
       });
 
     Promise.all(imageMap.map((item) => loadImage(item.src)))
-      .then((_prev) => {})
+      .then((_prev) => {setVisable(()=>false)})
       .catch((error) => console.error("Error loading images:", error));
   }, [imageMap]);
   return (
