@@ -69,7 +69,7 @@ export const TRIPS: Trip[] = [
     {
         card_title: "When We Met...",
         year: 2020,
-        card_img: "https://www.investopedia.com/thmb/4Aw71p0l8xLGymwEImn-TOV0QKI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1191806840-2452096c00be421f91f6cee1b6dfbd33.jpg",
+        card_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTymJEfwqi9M9xDI17SaNet3r1RWsDKv1U0jA&s",
         card_des: ["The Start Of Something Amazing..."],
         gallery_uri: "/meet",
         gallery_scroll: 0

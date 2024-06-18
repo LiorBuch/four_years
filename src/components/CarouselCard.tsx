@@ -19,8 +19,8 @@ function CarouselCard({
       <Carousel
         orientation="horizontal"
         height={"30vh"}
-        slideSize="25%"
-        slideGap="md"
+        slideSize="40%"
+        slideGap="lg"
         align="start"
         loop
       >
