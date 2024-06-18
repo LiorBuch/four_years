@@ -27,7 +27,7 @@ export function AboutHerPage() {
           >
             <Flex>
               <AspectRatio ratio={3 / 4} maw={"25vh"} mah={"35vh"}>
-                <Image src={"src/assets/eilat_21/20210909_203251.jpg"} />
+                <Image src={"https://github.com/LiorBuch/four_years/blob/main/public/assets/germany_22/20221202_163829.jpg?raw=true"} />
               </AspectRatio>
               <Flex direction={"column"} pl={"xs"}>
                 <Title>Hagit Solberg</Title>
