@@ -69,7 +69,7 @@ export function AboutHerPage() {
                 style={{
                   backgroundSize: "contain",
                   backgroundImage:
-                    'url("https://files.oaiusercontent.com/file-20UqHgucsC0KUOuG4ayOykIV?se=2024-06-18T16%3A20%3A05Z&sp=r&sv=2023-11-03&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd04f6978-874d-4d57-a76f-db745e855a78.webp&sig=LmAl%2BjqvOpMFfZVeR2wf0CfHoPbJ/3l%2B5axfB4Iqo%2BQ%3D")',
+                    'url("https://github.com/LiorBuch/four_years/blob/main/public/assets/misc/art_background.webp.png?raw=true")',
                 }}
               >
                 <SimpleGrid cols={4}>

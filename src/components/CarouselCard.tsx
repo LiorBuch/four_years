@@ -7,7 +7,6 @@ import {
   Button,
   Image,
   Text,
-  BackgroundImage,
 } from "@mantine/core";
 import { Trip } from "../providers/types";
 import { useNavigate } from "react-router-dom";

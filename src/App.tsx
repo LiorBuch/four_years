@@ -1,4 +1,4 @@
-import { BackgroundImage, Image, MantineProvider } from "@mantine/core";
+import { Image, MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import { ROUTES } from "./routes";
 import { THEME } from "./theme";
