@@ -11,8 +11,7 @@ import {
   Title,
 } from "@mantine/core";
 import Page from "./Page";
-import { ART } from "../providers/image_provider";
-
+import IMAGE_PROVIDER from "../providers/image_provider";
 export function AboutHerPage() {
   return (
     <Page>
@@ -51,7 +50,7 @@ export function AboutHerPage() {
               <Divider m={"xl"} />
               <Card shadow="lg" withBorder>
                 <SimpleGrid cols={4}>
-                  {ART.map((img, index) => {
+                  {IMAGE_PROVIDER.ART.map((img, index) => {
                     return (
                       <>
                         <AspectRatio
