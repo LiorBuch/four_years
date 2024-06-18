@@ -2,8 +2,7 @@ import { MantineProvider, AppShell, Group, ActionIcon } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import { IconHome, IconUserCircle,IconTrident } from "@tabler/icons-react";
 import { PropsWithChildren } from "react";
-import { RouterProvider, useNavigate } from "react-router-dom";
-import { ROUTES } from "../routes";
+import { useNavigate } from "react-router-dom";
 import { THEME } from "../theme";
 
 function Page({ children }: PropsWithChildren<{}>) {
@@ -14,7 +13,7 @@ function Page({ children }: PropsWithChildren<{}>) {
       <AppShell header={{ height: 60 }}>
         <AppShell.Header>
           <Group p={2} justify="center" preventGrowOverflow={false}>
-            <ActionIcon size={"lg"}>
+            <ActionIcon component="a" size={"lg"} href={"https://www.youtube.com/watch?v=9erLsEHAZRI"}>
               <IconTrident size={"lg"} />
             </ActionIcon>
             <ActionIcon
@@ -25,7 +24,7 @@ function Page({ children }: PropsWithChildren<{}>) {
             >
               <IconHome size={48} />
             </ActionIcon>
-            <ActionIcon size={"lg"}>
+            <ActionIcon size={"lg"} onClick={()=>navigate("/about")}>
               <IconUserCircle size={"lg"} />
             </ActionIcon>
           </Group>
