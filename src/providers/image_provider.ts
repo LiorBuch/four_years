@@ -16,61 +16,44 @@ const safariImages = import.meta.glob('../assets/safari/*.jpg')
 const meetImages = import.meta.glob('../assets/meet/*.jpg')
 const artImages = import.meta.glob('../assets/art/*.jpg')
 
-
-export const GERMANY22: ImgDes[] = []
-for (const img in germanyImages) {
-    GERMANY22.push({src:("src"+img.slice(2)),des:""})
+function createImageArray(images: Record<string, ()=>Promise<unknown>>): ImgDes[] {
+    return Object.keys(images).map((key) => { 
+        return {
+        src: "src"+key.slice(2),
+        des: "",
+    }});
 }
 
-export const CRAZY_24: ImgDes[] = []
-for (const img in crazy_24Images) {
-    CRAZY_24.push({src:("src"+img.slice(2)),des:""})
+export const GERMANY22: ImgDes[] = createImageArray(germanyImages);
+export const EILAT24: ImgDes[] = createImageArray(eilat24Images);
+export const EILAT21: ImgDes[] = createImageArray(eilat21Images);
+export const NORTH23: ImgDes[] = createImageArray(north23Images);
+export const NORTH21: ImgDes[] = createImageArray(north21Images);
+export const EILAT_ZUKIM: ImgDes[] = createImageArray(eilat_zukimImages);
+export const CRAZY_23: ImgDes[] = createImageArray(crazy_23Images);
+export const CRAZY_24: ImgDes[] = createImageArray(crazy_24Images);
+export const CRAZY_20: ImgDes[] = createImageArray(crazy_20Images);
+export const CRAZY_22: ImgDes[] = createImageArray(crazy_22Images);
+export const CRAZY_21: ImgDes[] = createImageArray(crazy_21Images);
+export const SAFARI: ImgDes[] = createImageArray(safariImages);
+export const MEET: ImgDes[] = createImageArray(meetImages);
+export const ART: ImgDes[] = createImageArray(artImages);
+
+const IMAGE_PROVIDER={
+    GERMANY22:GERMANY22,
+    EILAT24:EILAT24,
+    EILAT21:EILAT21,
+    NORTH23:NORTH23,
+    NORTH21:NORTH21,
+    EILAT_ZUKIM:EILAT_ZUKIM,
+    CRAZY_20:CRAZY_20,
+    CRAZY_21:CRAZY_21,
+    CRAZY_22:CRAZY_22,
+    CRAZY_23:CRAZY_23,
+    CRAZY_24:CRAZY_24,
+    SAFARI:SAFARI,
+    MEET:MEET,
+    ART:ART
 }
-export const CRAZY_22: ImgDes[] = []
-for (const img in crazy_22Images) {
-    CRAZY_22.push({src:("src"+img.slice(2)),des:""})
-}
-export const CRAZY_21: ImgDes[] = []
-for (const img in crazy_21Images) {
-    CRAZY_21.push({src:("src"+img.slice(2)),des:""})
-}
-export const CRAZY_20: ImgDes[] = []
-for (const img in crazy_20Images) {
-    CRAZY_20.push({src:("src"+img.slice(2)),des:""})
-}
-export const NORTH23: ImgDes[] = []
-for (const img in north23Images) {
-    NORTH23.push({src:("src"+img.slice(2)),des:""})
-}
-export const NORTH21: ImgDes[] = []
-for (const img in north21Images) {
-    NORTH21.push({src:("src"+img.slice(2)),des:""})
-}
-export const EILAT24: ImgDes[] = []
-for (const img in eilat24Images) {
-    EILAT24.push({src:("src"+img.slice(2)),des:""})
-}
-export const EILAT21: ImgDes[] = []
-for (const img in eilat21Images) {
-    EILAT21.push({src:("src"+img.slice(2)),des:""})
-}
-export const EILAT_ZUKIM: ImgDes[] = []
-for (const img in eilat_zukimImages) {
-    EILAT_ZUKIM.push({src:("src"+img.slice(2)),des:""})
-}
-export const CRAZY_23: ImgDes[] = []
-for (const img in crazy_23Images) {
-    CRAZY_23.push({src:("src"+img.slice(2)),des:""})
-}
-export const SAFARI: ImgDes[] = []
-for (const img in safariImages) {
-    SAFARI.push({src:("src"+img.slice(2)),des:""})
-}
-export const MEET: ImgDes[] = []
-for (const img in meetImages) {
-    MEET.push({src:("src"+img.slice(2)),des:""})
-}
-export const ART: ImgDes[] = []
-for (const img in artImages) {
-    ART.push({src:("src"+img.slice(2)),des:""})
-}
+console.log(JSON.stringify(IMAGE_PROVIDER))
+export default IMAGE_PROVIDER
