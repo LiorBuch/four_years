@@ -1,5 +1,14 @@
 import { Carousel } from "@mantine/carousel";
-import { Card, Title, Group, Badge, Button, Image, Text } from "@mantine/core";
+import {
+  Card,
+  Title,
+  Group,
+  Badge,
+  Button,
+  Image,
+  Text,
+  BackgroundImage,
+} from "@mantine/core";
 import { Trip } from "../providers/types";
 import { useNavigate } from "react-router-dom";
 
@@ -14,7 +23,17 @@ function CarouselCard({
 }) {
   const navigate = useNavigate();
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder maw={"120vh"}>
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      maw={"120vh"}
+      style={{
+        backgroundSize:"contain",
+        backgroundImage:
+          'url("https://media.istockphoto.com/id/838523506/vector/vector-illustration-green-watermelon-striped-seamless-hand-drawn-pattern.jpg?s=612x612&w=0&k=20&c=7_3jQ9Nvt3A7hiimTrnZAPO60D-yt8al4DaRvYdZEEE=")',
+      }}
+    >
       <Title>{title}</Title>
       <Carousel
         orientation="horizontal"
@@ -27,7 +46,11 @@ function CarouselCard({
         {year_trip.map((trip, index) => (
           <Carousel.Slide key={"slide_" + index}>
             <Card
-              shadow="sm"
+              style={{
+                backgroundSize:"contain",
+                backgroundImage:
+                  'url("https://img.freepik.com/free-vector/watermelon-seeds-background_1409-1016.jpg")',
+              }}
               padding="lg"
               radius="md"
               withBorder
@@ -38,7 +61,7 @@ function CarouselCard({
               </Card.Section>
 
               <Group justify="space-between" mt="md" mb="xs">
-                <Text fw={500}>{trip.card_title}</Text>
+                <Text c={"var(--mantine-color-white)"} fw={500}>{trip.card_title}</Text>
                 <Badge color={color}>{trip.year}</Badge>
               </Group>
 

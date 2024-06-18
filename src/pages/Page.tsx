@@ -2,12 +2,13 @@ import { AppShell, Group, ActionIcon } from "@mantine/core";
 import { IconHome, IconUserCircle, IconTrident } from "@tabler/icons-react";
 import { PropsWithChildren } from "react";
 import { useNavigate } from "react-router-dom";
+import classes from "./Page.module.css"
 
 function Page({ children }: PropsWithChildren<{}>) {
   const navigate = useNavigate();
   return (
     <AppShell header={{ height: 60 }}>
-      <AppShell.Header>
+      <AppShell.Header withBorder className={classes.app_header}>
         <Group p={2} justify="center" preventGrowOverflow={false}>
           <ActionIcon
             component="a"
