@@ -7,9 +7,9 @@ import classes from "./Page.module.css"
 function Page({ children }: PropsWithChildren<{}>) {
   const navigate = useNavigate();
   return (
-    <AppShell header={{ height: 60 }}>
+    <AppShell header={{ height: "3.5em" }}>
       <AppShell.Header withBorder className={classes.app_header}>
-        <Group p={2} justify="center" preventGrowOverflow={false}>
+        <Group p={"0em"} justify="center" preventGrowOverflow={false}>
           <ActionIcon
             component="a"
             size={"lg"}
@@ -19,11 +19,11 @@ function Page({ children }: PropsWithChildren<{}>) {
           </ActionIcon>
           <ActionIcon
             variant="gradient"
-            size={64}
+            size={"4em"}
             gradient={{ from: "blue", to: "cyan" }}
             onClick={() => navigate("/")}
           >
-            <IconHome size={48} />
+            <IconHome size={"48em"} />
           </ActionIcon>
           <ActionIcon size={"lg"} onClick={() => navigate("/about")}>
             <IconUserCircle size={"lg"} />
