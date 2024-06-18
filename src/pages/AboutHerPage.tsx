@@ -69,7 +69,7 @@ export function AboutHerPage() {
                 style={{
                   backgroundSize: "contain",
                   backgroundImage:
-                    'url("https://github.com/LiorBuch/four_years/blob/main/public/assets/misc/art_background.webp.png?raw=true")',
+                    'url("https://github.com/LiorBuch/four_years/blob/main/public/assets/misc/art_background.webp?raw=true")',
                 }}
               >
                 <SimpleGrid cols={4}>
